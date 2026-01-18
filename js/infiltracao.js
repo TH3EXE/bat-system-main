@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const subTabButtons = document.querySelectorAll('.sub-tab-button');
     const subTabPanels = document.querySelectorAll('.sub-tab-panel');
 
-    if (!searchInput) return; // Sai se não estiver na página certa
+    if (!searchInput) return; // Sai se não estiver na página certa 
 
     // Função para normalizar strings (remove acentos, minúsculas)
     function normalizarString(str) {

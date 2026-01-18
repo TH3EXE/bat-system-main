@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const loginForm = document.getElementById('login-form');
 
     if (loginForm) {
-        // Limpa sessão antiga ao abrir a tela de login
+        // Limpa sessão antiga ao abrir a tela de login 
         sessionStorage.clear();
 
         loginForm.addEventListener('submit', (e) => {

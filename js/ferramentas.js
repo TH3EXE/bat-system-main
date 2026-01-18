@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 2. BLOCO DE NOTAS
+    // 2. BLOCO DE NOTAS 
     initNotepad();
 
     // 3. PDF

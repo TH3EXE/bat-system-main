@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.getElementById('hospitais-search-input');
     const noResultsMsg = document.getElementById('hospitais-no-results');
 
-    if (!searchInput) return; // Sai se não estiver na página certa
+    if (!searchInput) return; // Sai se não estiver na página certa 
 
     // --- 2. FUNÇÕES ---
 

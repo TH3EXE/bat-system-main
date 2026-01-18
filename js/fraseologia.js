@@ -295,7 +295,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         let final = data.autorizacao.template_intro + itensTexto + data.autorizacao.template_fim;
-        // Remove o último separador
+        // Remove o último separador 
         final = final.replace("\n=================" + data.autorizacao.template_fim, data.autorizacao.template_fim);
         
         outputTextarea.value = final;

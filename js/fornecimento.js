@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const subTabButtons = document.querySelectorAll('.sub-tab-button');
     const subTabPanels = document.querySelectorAll('.sub-tab-panel');
     
-    // Elementos da Pesquisa
+    // Elementos da Pesquisa 
     const searchInput = document.getElementById('fornecimento-search-input');
     const noResultsMsg = document.getElementById('fornecimento-no-results');
 
