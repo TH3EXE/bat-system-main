@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAYNETECH SECURE LOGIN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body class="login-body">
+
+    <div class="login-bg-grid"></div>
+    <div class="login-scanline"></div>
+    <div class="bat-signal-bg"></div>
+
+    <main class="login-terminal-wrapper">
+        <div class="terminal-top-deco">
+            <span>SYS://SECURE_BOOT.init</span>
+            <div class="deco-leds"><span></span><span></span><span></span></div>
+        </div>
+
+        <div class="login-terminal-box">
+            <div class="terminal-header">
+                <div class="bat-signal-container">
+                    <svg class="bat-signal-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <radialGradient id="batSignalGradient" cx="50%" cy="50%">
+                                <stop offset="0%" stop-color="#E8B923" stop-opacity="1"/>
+                                <stop offset="40%" stop-color="#E8B923" stop-opacity="0.8"/>
+                                <stop offset="70%" stop-color="#E8B923" stop-opacity="0.4"/>
+                                <stop offset="100%" stop-color="#E8B923" stop-opacity="0"/>
+                            </radialGradient>
+                            <filter id="glow">
+                                <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>
+                        <!-- Círculo principal do bat-sinal -->
+                        <circle class="bat-signal-circle" cx="100" cy="100" r="75" fill="url(#batSignalGradient)" filter="url(#glow)"/>
+                        <!-- Círculo secundário para profundidade -->
+                        <circle class="bat-signal-circle-inner" cx="100" cy="100" r="60" fill="none" stroke="#E8B923" stroke-width="2" opacity="0.5"/>
+                        <!-- Símbolo do morcego (bat-sinal) -->
+                        <g class="bat-signal-symbol">
+                            <!-- Corpo do morcego -->
+                            <ellipse cx="100" cy="100" rx="6" ry="20" fill="#000"/>
+                            <!-- Cabeça -->
+                            <circle cx="100" cy="80" r="10" fill="#000"/>
+                            <!-- Asas superiores -->
+                            <path d="M 80 85 Q 65 95 80 105 Q 90 100 100 95 Q 90 90 80 85 Z" fill="#000"/>
+                            <path d="M 120 85 Q 135 95 120 105 Q 110 100 100 95 Q 110 90 120 85 Z" fill="#000"/>
+                            <!-- Asas inferiores -->
+                            <path d="M 80 105 Q 65 115 80 125 Q 90 120 100 115 Q 90 110 80 105 Z" fill="#000"/>
+                            <path d="M 120 105 Q 135 115 120 125 Q 110 120 100 115 Q 110 110 120 105 Z" fill="#000"/>
+                            <!-- Orelhas -->
+                            <path d="M 92 75 L 88 65 L 95 70 Z" fill="#000"/>
+                            <path d="M 108 75 L 112 65 L 105 70 Z" fill="#000"/>
+                        </g>
+                        <!-- Raios de luz animados -->
+                        <line class="bat-signal-line bat-signal-line-1" x1="100" y1="10" x2="100" y2="30" stroke="#E8B923" stroke-width="4" stroke-linecap="round" opacity="0.8"/>
+                        <line class="bat-signal-line bat-signal-line-2" x1="100" y1="170" x2="100" y2="190" stroke="#E8B923" stroke-width="4" stroke-linecap="round" opacity="0.8"/>
+                        <line class="bat-signal-line bat-signal-line-3" x1="10" y1="100" x2="30" y2="100" stroke="#E8B923" stroke-width="4" stroke-linecap="round" opacity="0.8"/>
+                        <line class="bat-signal-line bat-signal-line-4" x1="170" y1="100" x2="190" y2="100" stroke="#E8B923" stroke-width="4" stroke-linecap="round" opacity="0.8"/>
+                        <!-- Raios diagonais -->
+                        <line class="bat-signal-line bat-signal-line-5" x1="30" y1="30" x2="50" y2="50" stroke="#E8B923" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+                        <line class="bat-signal-line bat-signal-line-6" x1="170" y1="30" x2="150" y2="50" stroke="#E8B923" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+                        <line class="bat-signal-line bat-signal-line-7" x1="30" y1="170" x2="50" y2="150" stroke="#E8B923" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+                        <line class="bat-signal-line bat-signal-line-8" x1="170" y1="170" x2="150" y2="150" stroke="#E8B923" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+                    </svg>
+                </div>
+                <h1>WAYNETECH<span class="highlight">OS</span></h1>
+                <p class="terminal-subtitle">ACESSO RESTRITO // NÍVEL ÔMEGA</p>
+            </div>
+
+            <form id="login-form" class="terminal-form">
+                <div class="input-group-tech">
+                    <label for="username">ID OPERADOR_</label>
+                    <div class="input-wrapper">
+                        <input type="text" id="username" placeholder="INSIRA IDENTIFICAÇÃO..." autocomplete="off">
+                        <div class="input-anim-border"></div>
+                    </div>
+                </div>
+
+                <div class="input-group-tech">
+                    <label for="password">CÓDIGO DE ACESSO_</label>
+                    <div class="input-wrapper">
+                        <input type="password" id="password" placeholder="INSIRA PROTOCOLO..." autocomplete="off">
+                        <div class="input-anim-border"></div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-access-tech">
+                    <span class="btn-text">INICIALIZAR SISTEMA</span>
+                    <svg class="btn-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/></svg>
+                    <div class="btn-glitch-effect"></div>
+                </button>
+            </form>
+
+            <div class="terminal-footer">
+                <div class="status-readout">ENCRIPTAÇÃO: <span style="color:var(--neon-green)">ATIVA</span></div>
+                <div class="info-readout">IP: SECURE.BAT.NET // PORT: 443</div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/global.js"></script>
+</body>
+</html>
+
