@@ -495,7 +495,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
     }
-    setInterval(medirPing, 5000);
+    setInterval(medirPing, 10000);
     setTimeout(medirPing, 1000);
 
     // Tempo de uso removido conforme solicitado
