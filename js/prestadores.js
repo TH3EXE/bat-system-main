@@ -1,5 +1,5 @@
-// js/hospitais.js
-// Lógica para a página hospitais.html
+// js/prestadores.js
+// Lógica para a página prestadores.html
 // (Controle das Sub-Abas + Lógica de Pesquisa)
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const subTabPanels = document.querySelectorAll('.sub-tab-panel');
     
     // Elementos da Pesquisa
-    const searchInput = document.getElementById('hospitais-search-input');
-    const noResultsMsg = document.getElementById('hospitais-no-results');
+    const searchInput = document.getElementById('prestadores-search-input');
+    const noResultsMsg = document.getElementById('prestadores-no-results');
 
     if (!searchInput) return; // Sai se não estiver na página certa 
 
