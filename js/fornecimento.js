@@ -83,3 +83,4 @@ document.addEventListener('DOMContentLoaded', () => {
     // Roda o filtro uma vez no início (para o caso de a pesquisa estar preenchida)
     filtrarTabelasAtivas();
 });
+

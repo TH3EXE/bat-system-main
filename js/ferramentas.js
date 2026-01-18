@@ -223,3 +223,4 @@ function initCalculator() {
         displayResult.animate([{ transform: 'scale(0.9)', opacity: 0.5 }, { transform: 'scale(1)', opacity: 1 }], { duration: 300 });
     });
 }
+
