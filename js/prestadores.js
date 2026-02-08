@@ -84,3 +84,60 @@ document.addEventListener('DOMContentLoaded', () => {
     // Roda o filtro uma vez no início (para o caso de a pesquisa estar preenchida)
     filtrarTabelasAtivas();
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Inicializa a escuta nos botões de cópia
+    setupCopyButtons();
+});
+
+function setupCopyButtons() {
+    // Seleciona todos os botões com a classe .btn-copy
+    const buttons = document.querySelectorAll('.btn-copy');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            // Encontra a linha (TR) onde o botão foi clicado
+            const row = e.target.closest('tr');
+            const cells = row.querySelectorAll('td');
+
+            // Mapeamento das células (baseado na ordem do seu HTML):
+            // 0: Tipo, 1: Prestador, 2: Zona, 3: CNPJ, 4: CD Pessoa, 5: Endereço, 6: Telefone
+            
+            const prestador = cells[1].innerText.trim();
+            const zona = cells[2].innerText.trim();
+            
+            // Remove tudo que não for número (pontos, traços, barras) para CNPJ e CD
+            const cnpj = cells[3].innerText.trim().replace(/\D/g, ''); 
+            const cdPessoa = cells[4].innerText.trim().replace(/\D/g, ''); 
+            
+            const endereco = cells[5].innerText.trim();
+            const telefone = cells[6].innerText.trim();
+
+            // Monta o texto formatado
+            const textToCopy = `PRESTADOR> ${prestador}
+ZONA OU REGIÃO> ${zona}
+CNPJ> ${cnpj}
+CD PESSOA> ${cdPessoa}
+ENDEREÇO> ${endereco}
+TELEFONE> ${telefone}`;
+
+            // Executa a cópia para a área de transferência
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                // Feedback visual: Muda o texto do botão temporariamente
+                const originalText = button.innerText;
+                button.innerText = "COPIADO!";
+                button.style.borderColor = "#00ff00"; // Verde tático
+                button.style.color = "#00ff00";
+
+                setTimeout(() => {
+                    button.innerText = originalText;
+                    button.style.borderColor = ""; // Volta ao original (CSS)
+                    button.style.color = "";
+                }, 2000);
+            }).catch(err => {
+                console.error('Erro ao copiar: ', err);
+                alert('Falha ao acessar o clipboard.');
+            });
+        });
+    });
+}
