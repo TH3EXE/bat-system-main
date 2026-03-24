@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         let userRole = null;
 
-        if (username === 'BAT' && password === 'BAT#@123') {
+        if (username === 'BAT' && password === 'BAT#@') {
             userRole = 'ADM';
         } else if (username === 'OPERADOR' && password === '123') {
             userRole = 'OPERADOR';
