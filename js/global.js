@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             setTimeout(() => {
                 // --- VERIFICAÇÃO DE CREDENCIAIS ---
-                if (user === 'BATMAN' && pass === 'BATMAN666') {
+                if (user === 'BAT' && pass === 'BAT@#') {
                     // SUCESSO
                     sessionStorage.setItem('userRole', 'admin');
                     sessionStorage.setItem('userName', 'BRUCE WAYNE'); // Nome que aparece no sistema
