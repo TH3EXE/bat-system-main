@@ -52,14 +52,14 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="header-left" style="display:flex; align-items:center; gap:10px;">
                 <button class="menu-toggle-mobile" id="menu-toggle" aria-label="Menu">☰</button>
                 <svg class="bat-logo-small" style="width:20px; height:20px; color:#E8B923;" fill="currentColor" viewBox="0 0 512 512"><path d="M256,23.11c-131.79,0-238.16,92-238.16,205.51,0,80.12,48.24,150.15,116.32,185.74-5.32-2.31-29-14.7-27.11-41.48,1.38-19.12,14.65-42.34,32.32-35.84,10.6,3.9,13,16,16.51,20.8,4.71,6.48,12.72,12.21,21.5,14.54,14.62,3.89,32.48,1.49,43.2-12.22,17.4-22.3,16.27-56.1,16.27-56.1s43.51-17.1,83.87-17.1c40.37,0,83.87,17.1,83.87,17.1s-1.13,33.8,16.27,56.1c10.72,13.71,28.58,16.11,43.2,12.22,8.78-2.33,16.79-8.06,21.5-14.54,3.52-4.82,5.92-16.9,16.51-20.8,17.67-6.5,30.94,16.72,32.32,35.84,1.89,26.78-21.79,39.17-27.11,41.48,68.08-35.59,116.32-105.62,116.32-185.74C494.16,115.11,387.79,23.11,256,23.11Z"/></svg>
-                <span style="color:#E8B923; font-weight:900; letter-spacing:0.5px; font-family:'Rajdhani', sans-serif; font-size:0.9rem;">WAYNETECHOS</span>
+                <span style="color:#E8B923; font-weight:900; letter-spacing:0.5px; font-family:'Rajdhani', sans-serif; font-size:0.9rem;">PETO</span>
                 <div class="system-status" style="margin-left:15px; display:flex; gap:12px; font-size:0.65rem; color:#888;">
                     <div class="status-item"><span class="status-dot"></span> ONLINE</div>
                     <div class="status-item" id="clock-display">--:--</div>
                 </div>
             </div>
             <div class="header-right" style="display:flex; gap:10px; align-items:center;">
-                <div style="text-align:right; font-size:0.65rem; color:#888;">OPERADOR<br><strong style="color:#fff; font-size:0.7rem;">BRUCE.W</strong></div>
+                <div style="text-align:right; font-size:0.65rem; color:#888;">OPERADOR<br><strong style="color:#fff; font-size:0.7rem;">TH3EXE</strong></div>
                 <button class="btn-logout" onclick="sessionStorage.clear(); window.location.href='index.html'" style="background:transparent; border:1px solid #E8B923; color:#FF3131; padding:0.25rem 0.6rem; cursor:pointer; font-size:0.65rem;">SAIR</button>
             </div>
         </header>
