@@ -35,11 +35,11 @@ function initNotepad() {
 
     if (!notesListContainer) return;
 
-    let allNotes = JSON.parse(localStorage.getItem('bat-system-notes') || '[]');
+    let allNotes = JSON.parse(localStorage.getItem('peto-notes') || '[]');
     let activeNoteId = null;
 
     function saveStorage() {
-        localStorage.setItem('bat-system-notes', JSON.stringify(allNotes));
+        localStorage.setItem('peto-notes', JSON.stringify(allNotes));
     }
 
     function renderList() {

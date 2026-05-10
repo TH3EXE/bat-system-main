@@ -15,13 +15,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Carrega todas as notas do localStorage
     function loadNotesFromStorage() {
-        const notesJSON = localStorage.getItem('bat-system-notes');
+        const notesJSON = localStorage.getItem('peto-notes');
         allNotes = notesJSON ? JSON.parse(notesJSON) : [];
     }
 
     // Salva todas as notas no localStorage
     function saveNotesToStorage() {
-        localStorage.setItem('bat-system-notes', JSON.stringify(allNotes));
+        localStorage.setItem('peto-notes', JSON.stringify(allNotes));
     }
 
     // --- 2. FUNÇÕES DE RENDERIZAÇÃO (TELA) ---
