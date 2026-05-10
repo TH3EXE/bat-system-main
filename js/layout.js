@@ -59,7 +59,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             </div>
             <div class="header-right" style="display:flex; gap:10px; align-items:center;">
-                <div style="text-align:right; font-size:0.65rem; color:#888;">OPERADOR<br><strong style="color:#fff; font-size:0.7rem;">TH3EXE</strong></div>
+                <div style="text-align:right; font-size:0.65rem; color:#888;">
+                <br><strong style="color:#fff; font-size:0.7rem;">TH3EXE</strong></div>
                 <button class="btn-logout" onclick="sessionStorage.clear(); window.location.href='index.html'" style="background:transparent; border:1px solid #E8B923; color:#FF3131; padding:0.25rem 0.6rem; cursor:pointer; font-size:0.65rem;">SAIR</button>
             </div>
         </header>
