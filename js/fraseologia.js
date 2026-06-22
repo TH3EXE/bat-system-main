@@ -42,6 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 4. Reembolso (Texto estático)
         document.getElementById('inputs-reembolso').innerHTML = '<p><em>Este texto não requer preenchimento adicional.</em></p>';
+
+        // 5. Reembolso email-PPO (Texto estático)
+        document.getElementById('inputs-reembolso_email_HMO').innerHTML = '<p><em>Este texto não requer preenchimento adicional.</em></p>';
     }
 
     // --- FUNÇÕES AUXILIARES ---
@@ -225,6 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (tipo === 'negativas') processGeneric('select-negativas', 'inputs-negativas', data.negativas);
                 else if (tipo === 'finalizacao') processGeneric('select-finalizacao', 'inputs-finalizacao', data.finalizacao);
                 else if (tipo === 'reembolso') outputTextarea.value = data.reembolso.template;
+                else if (tipo === 'reembolso_email_HMO') outputTextarea.value = data.reembolso_email_HMO.template;
                 else if (tipo === 'autorizacao') processAutorizacao();
             });
         });
