@@ -109,11 +109,11 @@ window.FRASEOLOGIAS_DATA = {
 
 // 4. REEMBOLSO (FERRAMENTAS_TEXTO do Python)
 "reembolso": {
-    template: "PREZADO(A) SR(A). [_NM_BENEFICIARIO_],\n\nNÚMERO DO PROTOCOLO: [_NU_PROTOCOLO_]\n\nInformamos que as solicitações de reembolso devem ser realizadas exclusivamente por meio do Portal GNDI.\n\nPara sua conveniência, acesse:\n\nOs canais de atendimento aos beneficiários:\n\n->Aplicativo Hapvida NotreDame\n->Disponível para Android e iOS\n\n-> Portal do Beneficiário\n-> www.gndi.com.br\n\nNo ambiente digital, será possível acompanhar o status da solicitação e obter informações detalhadas sobre o andamento do reembolso.\n\nEm caso de dúvidas, nossa equipe de atendimento permanece à disposição pelos canais oficiais da operadora: 4090-1740, 0800 409 1740 OU 0800 463 4648."
+    template: "PREZADO(A) SR(A). [_NM_BENEFICIARIO_], NÚMERO DO PROTOCOLO: [_NU_PROTOCOLO_]\n\nInformamos que as solicitações de reembolso devem ser realizadas exclusivamente por meio do Portal GNDI.\n\nPara sua conveniência, acesse:\n\nOs canais de atendimento aos beneficiários:\n\n->Aplicativo Hapvida NotreDame\n->Disponível para Android e iOS\n\n-> Portal do Beneficiário\n-> www.gndi.com.br\n\nNo ambiente digital, será possível acompanhar o status da solicitação e obter informações detalhadas sobre o andamento do reembolso.\n\nEm caso de dúvidas, nossa equipe de atendimento permanece à disposição pelos canais oficiais da operadora: 4090-1740, 0800 409 1740 OU 0800 463 4648."
 },
 
 // 5. REEMBOLSO HMO (FERRAMENTAS_TEXTO do Python) - PADRONIZADO
 "reembolso_email_HMO": {
-    template: "PREZADO(A) SR(A). [_NM_BENEFICIARIO_],\n\nNÚMERO DO PROTOCOLO: [_NU_PROTOCOLO_]\n\nINFORMAMOS QUE O SEU PROTOCOLO ESTÁ SENDO ENCERRADO, POIS O ARQUIVO ANEXADO CORRESPONDE TRATATIVA VIA E-MAIL: reembolsondisprj@hapvida.com.br\n\nEM CASO DE DÚVIDAS ENTRAR EM CONTATO COM A CENTRAL DE ATENDIMENTO: 4090 1740 OU 0800 409 1740"    
+    template: "PREZADO(A) SR(A). [_NM_BENEFICIARIO_], NÚMERO DO PROTOCOLO: [_NU_PROTOCOLO_]\n\nINFORMAMOS QUE O SEU PROTOCOLO ESTÁ SENDO ENCERRADO, POIS O ARQUIVO ANEXADO CORRESPONDE TRATATIVA VIA E-MAIL: reembolsondisprj@hapvida.com.br\n\nEM CASO DE DÚVIDAS ENTRAR EM CONTATO COM A CENTRAL DE ATENDIMENTO: 4090 1740 OU 0800 409 1740"    
 }
 };
