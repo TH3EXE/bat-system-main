@@ -1,48 +1,100 @@
 ==========================================================================
-PETO v6.0 - MANUAL DE SOBREVIVÊNCIA (LEIA OU SOFRA)
+PETO v7.0 - MANUAL DE SOBREVIVÊNCIA INTERNA (LEIA OU SOFRA)
+==========================================================================
+Planejamento Estratégico: Define o "o que" and o "porquê" (visão de longo prazo). 
+Planejamento Tático: Define o "como" (planos de ação intermediários). 
+Planejamento Operacional: Define o "quem", "quando" e "onde" (rotina diária).
 ==========================================================================
 
 1. O QUE É ISSO?
 ----------------
-Um sistema operacional tático para controle de zonas, procedimentos e ferramentas 
-médicas. Feito para parecer que estamos na Batcaverna, mas rodando num navegador 
-Chrome qualquer.
+Um sistema operacional tático baseado em HTML, CSS e JS puro para controle de 
+zonas, procedimentos operacionais, fraseologias e codificações médicas (ANS/Excel).
+Feito por uma única pessoa (TH3EXE) motivada pela preguiça estratégica de realizar 
+tarefas lógicas e repetitivas. Roda gratuitamente no GitHub Pages.
 
-2. ESTRUTURA DE PASTAS (Não bagunce)
-------------------------------------
-/pages   -> Onde moram os HTMLs. Se criar uma página nova, jogue aqui.
-/assets  -> Onde mora a mágica (CSS e JS).
-   /js/layout.js -> O DEUS DO MENU. Se quiser mudar um link do topo, é AQUI.
-                    Não edite os 15 arquivos HTMLs manualmente, por favor. 
+2. ESTRUTURA DE PASTAS (Não mexa no alinhamento)
+------------------------------------------------
+/              -> Raiz do projeto. Contém o 'index.html' (Módulo de Autenticação de Acesso).
+/pages         -> Onde moram as interfaces internas (Dashboard, Ferramentas, etc).
+/data          -> Banco de dados bruto (Tabelas Excel de Medicamentos e TUSS).
+/assets        -> Onde mora a engenharia de controle do ecossistema.
+   /css/global.css    -> Identidade visual obrigatória: Amarelo (#f1c40f) e Preto.
+   /js/router.js      -> O DEUS DO SISTEMA. Controla rotas de segurança e caminhos.
+   /js/login.js       -> Validação de integridade de sessão e controle de acessos.
 
-3. COMO ADICIONAR UMA NOVA A
-? 
--------------------------------
-Passo 1: Crie o arquivo 'nova_aba.html' dentro da pasta /pages.
-Passo 2: Copie a estrutura básica de qualquer outro HTML (com o <div id="app-header-placeholder">).
-Passo 3: Abra 'assets/js/layout.js'.
-Passo 4: Adicione uma linha no array SYSTEM_ROUTES: 
-         { name: "NOVA ABA", url: "nova_aba.html" }
-Passo 5: Pronto. Mágica feita.
+3. PROTOCOLO DE EXPANSÃO (Como adicionar novas funções)
+-------------------------------------------------------
+A) ADICIONAR NOVA ABA NO MENU:
+   Passo 1: Crie o arquivo 'sua_pagina.html' dentro da pasta /pages.
+   Passo 2: Copie a estrutura básica de qualquer outro HTML interno, mantendo a tag
+            do menu lateral (<nav class="sidebar">) e a chamada do script no final.
+   Passo 3: Abra o arquivo de rotas em 'assets/js/router.js'.
+   Passo 4: Mapeie a nova chave no objeto de rotas do PETO:
+            case 'sua_pagina': target = inPages ? 'sua_pagina.html' : 'pages/sua_pagina.html'; break;
+   Passo 5: Adicione o link chamando `PETO_ROUTER.navigate('sua_pagina')` no menu. Ready.
 
-4. BUGS CONHECIDOS (Features não documentadas)
-----------------------------------------------
-- O Mapa Tático é renderizado em preto. Se ficar cinza, é porque a aba estava 
-  escondida quando ele carregou. O código tem um "kickstart" (invalidateSize) 
-  para resolver isso, mas as vezes ele é teimoso. Clique na aba de novo.
-- O Banco de Dados é local (JS). Se o navegador limpar o cache, as notas somem. 
-  Isso é uma feature de segurança (mentira, é porque não temos backend).
+B) INJETAR NOVA FUNÇÃO OU MODELO DE FRASEOLOGIA:
+   Passo 1: Vá até o objeto mapeado no arquivo da página correspondente.
+   Passo 2: Respeite estritamente a sintaxe JSON/JavaScript (Chave, dois pontos, aspas).
+   Passo 3: Se a nova função interagir com o botão 'GERAR TEXTO', certifique-se de que
+            o atributo `data-tipo` do HTML seja rigorosamente idêntico à chave criada no JS.
 
-5. FILOSOFIA DE CÓDIGO
-----------------------
-- Se funciona, não toque.
-- Se está bonito, é Mérito do CSS.
-- Se quebrou, foi o Coringa.
+4. GUIA DE PREVENÇÃO E RESOLUÇÃO DE ERROS (Leia para não quebrar o sistema)
+-------------------------------------------------------------------------
+- ERRO DE UNDEFINED NA TELA:
+  Causa: Ocorre quando o JavaScript tenta ler uma propriedade que foi digitada de 
+         forma errada.
+  Correção: Verifique se você escreveu '.template' com E. O uso de '.tamplate' com A 
+            ou qualquer erro de maiúscula/minúscula (Case Sensitivity) corta a linha
+            de dados e gera o erro.
+
+- LOOP INFINITO NA TELA DE LOGIN:
+  Causa: O primeiro formulário HTML tenta disparar um "submit" padrão para o servidor
+         antes do JavaScript registrar a sessão ativa.
+  Correção: Garanta que o botão de ação seja sempre do tipo `type="button"` (nunca submit)
+            e que o formulário possua a trava `onsubmit="return false;"`.
+
+- COLCHETES OU TEXTOS QUEBRANDO LINHA EM TELAS MENORES:
+  Causa: Falta de limitação de renderização de bloco.
+  Correção: Adicione a propriedade `white-space: nowrap;` direto na classe CSS ou 
+            no estilo inline do elemento HTML. Isso blinda o bloco contra quebras.
+
+- PÁGINAS RETORNANDO ERRO 404 NO GITHUB PAGES:
+  Causa: Erro de referência de nível de pasta ao tentar buscar os arquivos da pasta 'assets'.
+  Correção: Certifique-se de que qualquer página dentro da pasta '/pages/' utilize 
+            o prefixo '../' para voltar um nível antes de acessar a pasta 'assets' 
+            (Ex: `../assets/js/router.js`).
+
+5. FILOSOFIA DE CÓDIGO E MANIFESTO ANTI-CSS
+--------------------------------------------
+- NOTA DO ARQUITETO: O "Backend" deste sistema é uma obra de arte incompreendida feita 
+  em Vanilla JavaScript. Em vez de gastar meses configurando servidores, APIs restritas e 
+  bancos de dados SQL, toda a inteligência foi injetada em arrays e loops marotos que rodam 
+  direto na memória do navegador. É uma gambiarra conceitual assustadora? Com certeza. Mas 
+  destrói com precisão cirúrgica todas as tarefas repetitivas.
+
+- DA PREGUIÇA À GLÓRIA: O desenvolvedor deste ecossistema atingiu um nível de preguiça 
+  tão profundo e transcendental que ele prefere passar três noites em claro escrevendo 
+  linhas de automação a ter que copiar e colar manualmente a mesma fraseologia duas vezes. 
+  Ele odeia o trabalho repetitivo com todas as suas forças. Foi exatamente para salvar 
+  esses dias preguiçosos, sombrios e burocráticos que o PETO nasceu: para que o operador 
+  possa apenas clicar em um botão e deixar o código fazer o trabalho pesado.
+
+- DECLARAÇÃO DE ÓDIO AO CSS: Fazer telinha bonita é um porre. O desenvolvedor odeia o CSS 
+  com todas as forças de sua alma e despreza igualmente cada propriedade de alinhamento, 
+  flexbox ou grid. A única razão deste sistema parecer meramente decente, com um visual escuro 
+  e utilizável, é graças à era da Inteligência Artificial e a alguns sites de ajuda salvadores 
+  que mastigaram o código visual. Sem isso, o PETO seria uma tela branca com letras em Times 
+  New Roman. O ódio ao design é real, igualitário e imutável.
+
+- Todo o ecossistema deve usar estritamente o mesmo padrão de fonte e paleta amarela.
+- Sem backend real, sem vazamento de dados: Tudo morre no sessionStorage quando a aba fecha.
 
 6. CRÉDITOS
 -----------
-Desenvolvido para agilidade máxima e visual noturno para não queimar a retina 
-do operador às 3 da manhã.
+Desenvolvido por TH3EXE para automação de rotinas sem alternativas desgastantes. 
+Visual noturno projetado para preservar a retina do operador durante plantões às 3h da manhã.
 
-Boa sorte, vigilante.
+Boa sorte, vigilante. A operação está blindada contra falhas (e contra o esforço manual).
 ==========================================================================
