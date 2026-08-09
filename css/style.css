@@ -297,20 +297,24 @@ mark.highlight {
     text-align: center;
     font-weight: bold;
     color: var(--neon-green);
+    padding: 0.5rem;
+    word-break: break-word;
 }
 
 #loading-bar-container {
     width: 100%;
+    max-width: 600px;
+    margin: 0 auto 1rem;
     background-color: #333;
     height: 6px;
     border-radius: 3px;
-    margin-bottom: 1rem;
     display: none;
 }
 
 .actions-bar {
     margin-bottom: 1.5rem;
     text-align: center;
+    padding: 0 1rem;
 }
 
 .image-card:hover {
@@ -475,22 +479,32 @@ mark.highlight {
 }
 
 .upload-icon svg {
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
     stroke: var(--batman-yellow);
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .image-card {
     background-color: #1a1a1a;
     border: 1px solid var(--batman-grey);
-    padding: 5px;
+    padding: 8px;
     border-radius: 4px;
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 8px;
     transition: transform 0.2s;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.image-card img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: contain;
+    border-radius: 4px;
 }
 
 .download-btn {
@@ -794,11 +808,13 @@ mark.highlight {
 .editor-toolbar {
     display: flex;
     gap: 5px;
-    padding: 8px 12px;
+    padding: 8px;
     background-color: #222;
     border-bottom: 1px solid #444;
     flex-wrap: wrap;
     align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 .editor-toolbar-group {
@@ -853,14 +869,18 @@ mark.highlight {
 }
 
 .rich-editor {
-    flex-grow: 1;
-    padding: 20px;
+    flex: 1;
+    padding: 15px;
     outline: none;
     overflow-y: auto;
+    overflow-x: hidden;
     color: #eee;
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     background-color: #151515;
+    min-height: 300px;
+    word-wrap: break-word;
+    box-sizing: border-box;
 }
 
 .rich-editor:empty:before {
@@ -871,8 +891,10 @@ mark.highlight {
 
 .note-actions {
     display: flex;
-    gap: 1rem;
+    gap: 0.8rem;
     margin-top: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 #save-note-btn {
@@ -1069,26 +1091,38 @@ mark.highlight {
 .notepad-container {
     display: flex;
     gap: 1rem;
-    max-width: 1400px;
+    max-width: 100%;
+    width: 100%;
     margin: 0 auto;
-    height: 70vh;
+    min-height: 500px;
+    height: auto;
+    max-height: 70vh;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 0;
 }
 
 .notes-list-column {
-    flex: 1;
-    min-width: 250px;
-    max-width: 350px;
+    flex: 0 0 280px;
+    min-width: 0;
+    max-width: 280px;
     background: #1a1a1a;
     border: 1px solid #444;
     border-radius: 4px;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
 .note-editor-column {
-    flex: 2;
+    flex: 1 1 auto;
+    min-width: 0;
+    width: 100%;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
 .note-editor textarea {
@@ -1618,13 +1652,15 @@ mark.highlight {
 }
 
 .calc-container {
-    max-width: 600px;
+    max-width: 700px;
+    width: 100%;
     margin: 0 auto;
     background-color: #1a1a1a;
     border: 1px solid var(--batman-grey);
     border-radius: 6px;
     padding: 1.5rem;
     box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    box-sizing: border-box;
 }
 
 .calc-inputs-grid {
@@ -1632,13 +1668,14 @@ mark.highlight {
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
     margin-bottom: 1rem;
+    width: 100%;
 }
 
 .calc-result-box {
     background-color: #0a0a0a;
     border: 2px dashed #444;
     border-radius: 6px;
-    padding: 1rem;
+    padding: 1.5rem 1rem;
     text-align: center;
     margin-top: 1rem;
     transition: all 0.3s ease;
@@ -1646,12 +1683,36 @@ mark.highlight {
 }
 
 .calc-result-value {
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: var(--neon-green);
     font-weight: 800;
     margin: 0;
-    line-height: 1;
+    line-height: 1.2;
     text-shadow: 0 0 10px rgba(57, 255, 20, 0.3);
+}
+
+.calc-result-label {
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.calc-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.calc-header p {
+    color: #888;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.ref-table-container {
+    margin-top: 2rem;
+    overflow-x: auto;
 }
 
 .upload-zone {
@@ -1664,13 +1725,20 @@ mark.highlight {
     transition: all 0.3s ease;
     margin-bottom: 1rem;
     position: relative;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .image-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     gap: 0.8rem;
     margin-top: 1rem;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .zonas-filtros-container {
@@ -2496,6 +2564,17 @@ input:focus, select:focus, textarea:focus {
     padding-bottom: 0.5rem;
     font-size: 1.1rem;
     margin: 0;
+}
+
+.section-title-centered {
+    text-align: center;
+    width: 100%;
+    margin: 2rem auto 1.5rem;
+    color: var(--batman-yellow);
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 #auth-list-container {

@@ -476,6 +476,14 @@ body.light-mode .list-item:hover, body.light-mode .note-item:hover {
     border-color: #E8B923 !important;
 }
 
+.section-title-centered {
+    text-align: center !important;
+    width: 100% !important;
+    margin: 2rem auto 1.5rem !important;
+    font-size: 1.3rem !important;
+    padding: 0 1rem !important;
+}
+
 .bat-signal-container {
     position: relative;
     width: 120px;
@@ -887,6 +895,92 @@ input[type="text"], input[type="password"], input[type="number"], select, textar
   .hero-title {
     font-size: 2rem !important;
   }
+  .section-title-centered {
+    font-size: 1.1rem !important;
+    margin: 1.5rem auto 1rem !important;
+    letter-spacing: 1px !important;
+  }
+  .notepad-container {
+    flex-direction: column !important;
+    max-height: none !important;
+    height: auto !important;
+    gap: 1rem !important;
+  }
+  .notes-list-column {
+    flex: 0 0 auto !important;
+    min-width: 100% !important;
+    max-height: 200px !important;
+  }
+  .note-editor-column {
+    flex: 1 !important;
+    min-height: 400px !important;
+  }
+  .editor-toolbar {
+    padding: 6px !important;
+    gap: 4px !important;
+  }
+  .toolbar-btn {
+    padding: 4px 6px !important;
+    font-size: 0.85rem !important;
+    min-width: 28px !important;
+  }
+  .toolbar-select {
+    font-size: 0.75rem !important;
+    padding: 3px !important;
+  }
+  .note-actions {
+    gap: 0.5rem !important;
+  }
+  .note-actions button {
+    flex: 1 1 auto !important;
+    min-width: 100px !important;
+    font-size: 0.8rem !important;
+    padding: 0.6rem !important;
+  }
+  .upload-zone {
+    padding: 1.5rem 0.8rem !important;
+    min-height: 120px !important;
+  }
+  .upload-icon svg {
+    width: 36px !important;
+    height: 36px !important;
+  }
+  .image-gallery {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)) !important;
+    gap: 0.6rem !important;
+  }
+  .image-card {
+    padding: 6px !important;
+  }
+  .image-card img {
+    max-height: 150px !important;
+  }
+  .pdf-header-info {
+    padding: 0.8rem !important;
+    font-size: 0.85rem !important;
+  }
+  .calc-container {
+    padding: 1rem !important;
+    max-width: 100% !important;
+  }
+  .calc-inputs-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.8rem !important;
+  }
+  .calc-result-value {
+    font-size: 2.5rem !important;
+  }
+  .calc-result-box {
+    padding: 1rem 0.5rem !important;
+  }
+  .ref-table-container {
+    overflow-x: auto !important;
+    margin-top: 1.5rem !important;
+  }
+  .ref-table-container table {
+    min-width: 280px !important;
+    font-size: 0.85rem !important;
+  }
   .login-terminal-box {
     width: 95% !important;
       padding: 1.5rem 1.2rem !important;
@@ -1036,6 +1130,33 @@ input[type="text"], input[type="password"], input[type="number"], select, textar
   .btn-access-tech {
     font-size: 0.9rem !important;
       letter-spacing: 1px;
+  }
+  .section-title-centered {
+    font-size: 0.95rem !important;
+    margin: 1rem auto 0.75rem !important;
+    letter-spacing: 0.5px !important;
+    padding: 0 0.5rem !important;
+  }
+  .calc-container {
+    padding: 0.8rem !important;
+  }
+  .calc-result-value {
+    font-size: 2rem !important;
+  }
+  .calc-header p {
+    font-size: 0.8rem !important;
+  }
+  .upload-zone {
+    padding: 1rem 0.5rem !important;
+    min-height: 100px !important;
+  }
+  .upload-icon svg {
+    width: 32px !important;
+    height: 32px !important;
+  }
+  .image-gallery {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)) !important;
+    gap: 0.5rem !important;
   }
 }}
 
