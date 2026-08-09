@@ -1,19 +1,13 @@
-/* ========================================= */
-/* ESTILOS MOBILE E RESPONSIVIDADE           */
-/* ========================================= */
-
-/* OCULTAR BARRA DE ABAS ANTIGA - DESKTOP E MOBILE */
 .main-navigation {
     display: none !important;
     visibility: hidden !important;
     height: 0 !important;
     overflow: hidden !important;
     margin: 0 !important;
-    padding: 0 !important; 
+    padding: 0 !important;
     opacity: 0 !important;
 }
 
-/* Desabilitar animação de digitação (| piscando) */
 .typing-animation {
     animation: none !important;
     border-right: none !important;
@@ -21,7 +15,6 @@
     white-space: normal !important;
 }
 
-/* Melhorias no Painel de Controle */
 .dashboard-hero {
     text-align: center !important;
     margin-bottom: 2.5rem !important;
@@ -31,7 +24,6 @@
     border: 1px solid rgba(232, 185, 35, 0.2) !important;
 }
 
-/* Dashboard Stats - Estatísticas */
 .dashboard-stats {
     display: grid !important;
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)) !important;
@@ -94,25 +86,6 @@
     text-transform: uppercase !important;
     letter-spacing: 1px !important;
     font-weight: 600 !important;
-}
-
-@media (max-width: 768px) {
-    .dashboard-stats {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 0.8rem !important;
-    }
-    
-    .stat-card {
-        padding: 1rem !important;
-    }
-    
-    .stat-icon {
-        font-size: 1.5rem !important;
-    }
-    
-    .stat-value {
-        font-size: 1.2rem !important;
-    }
 }
 
 body.light-mode .stat-card {
@@ -192,27 +165,7 @@ body.light-mode .stat-label {
     line-height: 1.5 !important;
 }
 
-@media (max-width: 768px) {
-    .dashboard-grid {
-        grid-template-columns: 1fr !important;
-        gap: 1.5rem !important;
-    }
-    
-    .dashboard-hero {
-        padding: 2rem 1.5rem !important;
-    }
-    
-    .hero-title {
-        font-size: 2rem !important;
-    }
-}
-
-/* Ocultar qualquer navegação antiga que possa aparecer */
-nav.main-navigation,
-.app-header nav.main-navigation,
-header nav.main-navigation,
-header .main-navigation,
-.app-header .main-navigation {
+nav.main-navigation, .app-header nav.main-navigation, header nav.main-navigation, header .main-navigation, .app-header .main-navigation {
     display: none !important;
     visibility: hidden !important;
     height: 0 !important;
@@ -224,99 +177,12 @@ header .main-navigation,
     left: -9999px !important;
 }
 
-/* Ocultar header antigo se existir antes do layout.js carregar */
 .app-header:has(.main-navigation) .main-navigation {
     display: none !important;
 }
 
-/* Garantir que apenas o novo header do layout.js seja visível */
-.app-header .header-left,
-.app-header .header-right {
+.app-header .header-left, .app-header .header-right {
     display: flex !important;
-}
-
-/* Responsividade - Login Mobile Melhorado */
-@media (max-width: 768px) {
-    .login-terminal-box { 
-        width: 95% !important; 
-        padding: 1.5rem 1.2rem !important; 
-        max-width: 100%;
-        transition: all 0.3s ease;
-    }
-    .terminal-header h1 { 
-        font-size: 1.6rem !important; 
-        letter-spacing: 1px;
-        transition: font-size 0.3s ease;
-    }
-    .terminal-header { margin-bottom: 1.5rem !important; }
-    .bat-logo-login { width: 48px !important; }
-    .input-group-tech { margin-bottom: 1.3rem !important; }
-    .input-group-tech input {
-        padding: 10px 12px !important;
-        font-size: 0.95rem !important;
-    }
-    .btn-access-tech {
-        padding: 12px !important;
-        font-size: 1rem !important;
-    }
-    .terminal-footer {
-        flex-direction: column !important;
-        gap: 0.5rem !important;
-        font-size: 0.6rem !important;
-    }
-    .login-bg-grid {
-        background-size: 30px 30px !important;
-        transform: rotateX(60deg) scale(1.5) !important;
-    }
-    .bat-signal-bg {
-        width: 100vw !important;
-        height: 100vw !important;
-    }
-}
-
-@media (max-width: 500px) {
-    .login-terminal-box { 
-        width: 95% !important; 
-        padding: 1.2rem 1rem !important; 
-    }
-    .terminal-header h1 { 
-        font-size: 1.4rem !important; 
-        letter-spacing: 0.5px;
-    }
-    .terminal-subtitle {
-        font-size: 0.65rem !important;
-        letter-spacing: 2px;
-    }
-    .input-group-tech label {
-        font-size: 0.65rem !important;
-    }
-    .btn-access-tech {
-        font-size: 0.9rem !important;
-        letter-spacing: 1px;
-    }
-}
-
-/* ========================================= */
-/* ESTILOS PARA SIDEBAR E LAYOUT (layout.js) */
-/* ========================================= */
-
-/* Header criado pelo layout.js - PRETO E RESPONSIVO - TAMANHO REDUZIDO */
-.app-header {
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    background-color: #000000 !important;
-    padding: 0.4rem 0.8rem !important;
-    border-bottom: 1px solid var(--batman-yellow) !important;
-    position: sticky !important;
-    top: 0 !important;
-    z-index: 1000 !important;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.8) !important;
-    flex-wrap: wrap !important;
-    gap: 8px !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-    min-height: 50px !important;
 }
 
 .header-left {
@@ -339,7 +205,6 @@ header .main-navigation,
     flex-wrap: wrap !important;
 }
 
-/* Header Actions - Botões SISTEMA e CONFIGURAÇÕES */
 .header-actions {
     display: flex !important;
     gap: 10px !important;
@@ -380,12 +245,6 @@ header .main-navigation,
     display: none !important;
 }
 
-@media (min-width: 1200px) {
-    .menu-toggle-text {
-        display: inline !important;
-    }
-}
-
 .dropdown-content {
     display: none !important;
     position: absolute !important;
@@ -405,8 +264,7 @@ header .main-navigation,
     display: block !important;
 }
 
-.panel-info-item,
-.user-info-item {
+.panel-info-item, .user-info-item {
     display: flex !important;
     justify-content: space-between !important;
     font-size: 0.75rem !important;
@@ -416,13 +274,11 @@ header .main-navigation,
     color: #aaa !important;
 }
 
-.panel-info-item span,
-.user-info-item span {
+.panel-info-item span, .user-info-item span {
     color: #888 !important;
 }
 
-.panel-info-item strong,
-.user-info-item strong {
+.panel-info-item strong, .user-info-item strong {
     color: var(--batman-yellow) !important;
 }
 
@@ -438,7 +294,6 @@ header .main-navigation,
     box-shadow: 0 0 5px var(--neon-green) !important;
 }
 
-/* Botões dentro do header */
 .app-header .app-button {
     background-color: #000000 !important;
     border: 1px solid var(--batman-yellow) !important;
@@ -453,9 +308,6 @@ header .main-navigation,
     color: #fff !important;
 }
 
-/* ========================================= */
-/* TEMA LIGHT MODE - APLICAÇÃO COMPLETA     */
-/* ========================================= */
 body.light-mode {
     background-color: #ffffff !important;
     color: #333333 !important;
@@ -483,8 +335,7 @@ body.light-mode .dropdown-content {
     border-color: #E8B923 !important;
 }
 
-body.light-mode .dashboard-card,
-body.light-mode .card {
+body.light-mode .dashboard-card, body.light-mode .card {
     background-color: #f5f5f5 !important;
     color: #333333 !important;
     border-color: rgba(232, 185, 35, 0.3) !important;
@@ -495,9 +346,7 @@ body.light-mode .dashboard-card:hover {
     box-shadow: 0 15px 30px rgba(0,0,0,0.1), 0 0 20px rgba(232, 185, 35, 0.2) !important;
 }
 
-body.light-mode input,
-body.light-mode select,
-body.light-mode textarea {
+body.light-mode input, body.light-mode select, body.light-mode textarea {
     background-color: #ffffff !important;
     color: #333333 !important;
     border-color: #E8B923 !important;
@@ -507,8 +356,7 @@ body.light-mode .sidebar-nav .nav-link {
     color: #555 !important;
 }
 
-body.light-mode .sidebar-nav .nav-link:hover,
-body.light-mode .sidebar-nav .nav-link.active {
+body.light-mode .sidebar-nav .nav-link:hover, body.light-mode .sidebar-nav .nav-link.active {
     background-color: rgba(232, 185, 35, 0.15) !important;
     color: #E8B923 !important;
 }
@@ -522,14 +370,12 @@ body.light-mode .menu-toggle:hover {
     background-color: rgba(232, 185, 35, 0.1) !important;
 }
 
-body.light-mode .panel-info-item,
-body.light-mode .user-info-item {
+body.light-mode .panel-info-item, body.light-mode .user-info-item {
     color: #555 !important;
     border-bottom-color: rgba(232, 185, 35, 0.2) !important;
 }
 
-body.light-mode .panel-info-item strong,
-body.light-mode .user-info-item strong {
+body.light-mode .panel-info-item strong, body.light-mode .user-info-item strong {
     color: #E8B923 !important;
 }
 
@@ -537,8 +383,7 @@ body.light-mode .system-status {
     color: #666 !important;
 }
 
-body.light-mode .header-left span,
-body.light-mode .header-right {
+body.light-mode .header-left span, body.light-mode .header-right {
     color: #333 !important;
 }
 
@@ -569,19 +414,13 @@ body.light-mode .card-desc {
     color: #666 !important;
 }
 
-body.light-mode table,
-body.light-mode tr,
-body.light-mode td,
-body.light-mode th {
+body.light-mode table, body.light-mode tr, body.light-mode td, body.light-mode th {
     background-color: #f5f5f5 !important;
     color: #333333 !important;
     border-color: #E8B923 !important;
 }
 
-body.light-mode .panel,
-body.light-mode .module,
-body.light-mode .container,
-body.light-mode .box {
+body.light-mode .panel, body.light-mode .module, body.light-mode .container, body.light-mode .box {
     background-color: #f5f5f5 !important;
     color: #333333 !important;
 }
@@ -595,22 +434,17 @@ body.light-mode a:not(.nav-link):not(.dashboard-card):hover {
     text-decoration: underline !important;
 }
 
-/* Aplicar modo claro em TODOS os elementos possíveis */
 body.light-mode * {
-    /* Forçar cores em elementos que ainda estão escuros */
+
 }
 
-body.light-mode .result-card,
-body.light-mode .item-card,
-body.light-mode .info-box,
-body.light-mode .data-card {
+body.light-mode .result-card, body.light-mode .item-card, body.light-mode .info-box, body.light-mode .data-card {
     background-color: #f5f5f5 !important;
     color: #333333 !important;
     border-color: rgba(232, 185, 35, 0.3) !important;
 }
 
-body.light-mode .toolbar,
-body.light-mode .toolbar-btn {
+body.light-mode .toolbar, body.light-mode .toolbar-btn {
     background-color: #f5f5f5 !important;
     color: #333333 !important;
     border-color: #E8B923 !important;
@@ -625,29 +459,23 @@ body.light-mode .status-indicator {
     border-color: #E8B923 !important;
 }
 
-body.light-mode .search-box,
-body.light-mode .filter-box {
+body.light-mode .search-box, body.light-mode .filter-box {
     background-color: #ffffff !important;
     color: #333333 !important;
     border-color: #E8B923 !important;
 }
 
-body.light-mode .list-item,
-body.light-mode .note-item {
+body.light-mode .list-item, body.light-mode .note-item {
     background-color: #f5f5f5 !important;
     color: #333333 !important;
     border-color: rgba(232, 185, 35, 0.3) !important;
 }
 
-body.light-mode .list-item:hover,
-body.light-mode .note-item:hover {
+body.light-mode .list-item:hover, body.light-mode .note-item:hover {
     background-color: #eeeeee !important;
     border-color: #E8B923 !important;
 }
 
-/* ========================================= */
-/* BAT-SINAL ANIMADO NA TELA DE LOGIN       */
-/* ========================================= */
 .bat-signal-container {
     position: relative;
     width: 120px;
@@ -687,14 +515,37 @@ body.light-mode .note-item:hover {
     filter: drop-shadow(0 0 3px #E8B923);
 }
 
-.bat-signal-line-1 { animation-delay: 0s; }
-.bat-signal-line-2 { animation-delay: 0.4s; }
-.bat-signal-line-3 { animation-delay: 0.2s; }
-.bat-signal-line-4 { animation-delay: 0.6s; }
-.bat-signal-line-5 { animation-delay: 0.1s; }
-.bat-signal-line-6 { animation-delay: 0.5s; }
-.bat-signal-line-7 { animation-delay: 0.3s; }
-.bat-signal-line-8 { animation-delay: 0.7s; }
+.bat-signal-line-1 {
+    animation-delay: 0s;
+}
+
+.bat-signal-line-2 {
+    animation-delay: 0.4s;
+}
+
+.bat-signal-line-3 {
+    animation-delay: 0.2s;
+}
+
+.bat-signal-line-4 {
+    animation-delay: 0.6s;
+}
+
+.bat-signal-line-5 {
+    animation-delay: 0.1s;
+}
+
+.bat-signal-line-6 {
+    animation-delay: 0.5s;
+}
+
+.bat-signal-line-7 {
+    animation-delay: 0.3s;
+}
+
+.bat-signal-line-8 {
+    animation-delay: 0.7s;
+}
 
 @keyframes batSignalPulse {
     0%, 100% {
@@ -744,7 +595,6 @@ body.light-mode .note-item:hover {
     }
 }
 
-/* Melhorar o bat-signal-bg de fundo */
 .bat-signal-bg {
     position: absolute;
     top: 50%;
@@ -768,7 +618,6 @@ body.light-mode .note-item:hover {
     }
 }
 
-/* Ajustar header do terminal para o novo bat-sinal */
 .terminal-header .bat-signal-container {
     margin-bottom: 20px;
 }
@@ -779,43 +628,45 @@ body.light-mode .note-item:hover {
     color: var(--bat-yellow);
 }
 
-/* Remover o logo antigo se existir */
 .terminal-header .bat-logo-login {
     display: none;
 }
 
-/* Garantir que todos os elementos cinzas sejam pretos */
 .app-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
     background-color: #000000 !important;
+    padding: 0.4rem 0.8rem !important;
+    border-bottom: 1px solid var(--batman-yellow) !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000 !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.8) !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    min-height: 50px !important;
 }
 
 .app-header > * {
     background-color: transparent !important;
 }
 
-/* Garantir que o header não quebre o layout */
 body {
     margin: 0 !important;
     padding: 0 !important;
     overflow-x: hidden !important;
 }
 
-/* Inputs e elementos de formulário - preto */
-input[type="text"],
-input[type="password"],
-input[type="number"],
-select,
-textarea {
+input[type="text"], input[type="password"], input[type="number"], select, textarea {
     background-color: #000000 !important;
     border: 1px solid var(--batman-yellow) !important;
     color: #fff !important;
 }
 
-/* Cards e containers - preto */
-.card,
-.container,
-.panel,
-.module {
+.card, .container, .panel, .module {
     background-color: #000000 !important;
     border-color: var(--batman-yellow) !important;
 }
@@ -862,14 +713,12 @@ textarea {
     border-color: #FF3131 !important;
 }
 
-/* Layout Principal */
 .main-layout {
     display: flex !important;
     height: calc(100vh - 60px) !important;
     overflow: hidden !important;
 }
 
-/* Sidebar - Desktop: sempre visível, Mobile: oculto por padrão */
 .app-sidebar {
     width: 250px !important;
     background-color: #000000 !important;
@@ -883,7 +732,6 @@ textarea {
     position: relative !important;
 }
 
-/* Desktop: ocultar sidebar quando desktop-hidden */
 .app-sidebar.desktop-hidden {
     width: 0 !important;
     min-width: 0 !important;
@@ -917,7 +765,6 @@ textarea {
     background: #fff !important;
 }
 
-/* Links de Navegação do Sidebar */
 .sidebar-nav .nav-link {
     display: flex !important;
     align-items: center !important;
@@ -955,7 +802,6 @@ textarea {
     font-weight: 700 !important;
 }
 
-/* Conteúdo Principal */
 .app-content {
     flex: 1 !important;
     overflow-y: auto !important;
@@ -981,7 +827,6 @@ textarea {
     background: #fff !important;
 }
 
-/* Menu Hambúrguer - Visível sempre */
 .menu-toggle-mobile {
     display: block !important;
     background: transparent !important;
@@ -1002,7 +847,6 @@ textarea {
     background: rgba(232, 185, 35, 0.1) !important;
 }
 
-/* Overlay quando sidebar está aberto - apenas mobile */
 .sidebar-overlay {
     display: none !important;
     position: fixed !important;
@@ -1019,173 +863,235 @@ textarea {
     display: block !important;
 }
 
-/* Desktop: overlay nunca aparece */
-@media (min-width: 769px) {
-    .sidebar-overlay {
-        display: none !important;
-    }
-    
-    .sidebar-overlay.active {
-        display: none !important;
-    }
-}
-
-/* Responsividade Mobile - Sidebar e Header */
 @media (max-width: 768px) {
-    .app-sidebar {
-        position: fixed !important;
-        left: 0 !important;
-        top: 60px !important;
-        height: calc(100vh - 60px) !important;
-        width: 280px !important;
-        transform: translateX(-100%) !important;
-        box-shadow: 2px 0 10px rgba(0,0,0,0.5) !important;
-    }
-    
-    .app-sidebar.mobile-open {
-        transform: translateX(0) !important;
-    }
-    
-    .main-layout {
-        flex-direction: column !important;
-    }
-    
-    .app-content {
-        width: 100% !important;
-        padding: 15px !important;
-    }
-    
-    .app-header {
-        flex-direction: column !important;
-        align-items: stretch !important;
-        padding: 0.6rem !important;
-        gap: 10px !important;
-        position: relative !important;
-        min-height: auto !important;
-    }
-    
-    .header-left {
-        width: 100% !important;
-        flex-wrap: wrap !important;
-        gap: 6px !important;
-        justify-content: space-between !important;
-        order: 1 !important;
-    }
-    
-    .header-right {
-        width: 100% !important;
-        justify-content: space-between !important;
-        gap: 8px !important;
-        flex-wrap: wrap !important;
-        order: 3 !important;
-    }
-    
-    .header-actions {
-        width: 100% !important;
-        justify-content: flex-start !important;
-        gap: 6px !important;
-        flex-wrap: wrap !important;
-        order: 2 !important;
-        margin-top: 6px !important;
-    }
-    
-    .menu-toggle {
-        flex: 1 1 auto !important;
-        min-width: 100px !important;
-        justify-content: center !important;
-        font-size: 0.7rem !important;
-        padding: 0.25rem 0.5rem !important;
-    }
-    
-    .menu-toggle-text {
-        display: inline !important;
-    }
-    
-    .system-status {
-        font-size: 0.6rem !important;
-        gap: 8px !important;
-        margin-left: 0 !important;
-        flex-wrap: wrap !important;
-    }
-    
-    .header-left span {
-        font-size: 0.75rem !important;
-    }
-    
-    .header-left svg {
-        width: 18px !important;
-        height: 18px !important;
-    }
-    
-    .btn-logout {
-        padding: 0.2rem 0.5rem !important;
-        font-size: 0.6rem !important;
-    }
-    
-    .dropdown-content {
-        position: static !important;
-        width: 100% !important;
-        margin-top: 0.5rem !important;
-        box-shadow: none !important;
-        border: 1px solid var(--batman-yellow) !important;
-        border-radius: 4px !important;
-        right: auto !important;
-        left: auto !important;
-        padding: 0.6rem !important;
-    }
-}
+  .dashboard-stats {
+    grid-template-columns: repeat(2, 1fr) !important;
+      gap: 0.8rem !important;
+  }
+  .stat-card {
+    padding: 1rem !important;
+  }
+  .stat-icon {
+    font-size: 1.5rem !important;
+  }
+  .stat-value {
+    font-size: 1.2rem !important;
+  }
+  .dashboard-grid {
+    grid-template-columns: 1fr !important;
+      gap: 1.5rem !important;
+  }
+  .dashboard-hero {
+    padding: 2rem 1.5rem !important;
+  }
+  .hero-title {
+    font-size: 2rem !important;
+  }
+  .login-terminal-box {
+    width: 95% !important;
+      padding: 1.5rem 1.2rem !important;
+      max-width: 100%;
+      transition: all 0.3s ease;
+  }
+  .terminal-header h1 {
+    font-size: 1.6rem !important;
+      letter-spacing: 1px;
+      transition: font-size 0.3s ease;
+  }
+  .terminal-header {
+    margin-bottom: 1.5rem !important;
+  }
+  .bat-logo-login {
+    width: 48px !important;
+  }
+  .input-group-tech {
+    margin-bottom: 1.3rem !important;
+  }
+  .input-group-tech input {
+    padding: 10px 12px !important;
+      font-size: 0.95rem !important;
+  }
+  .btn-access-tech {
+    padding: 12px !important;
+      font-size: 1rem !important;
+  }
+  .terminal-footer {
+    flex-direction: column !important;
+      gap: 0.5rem !important;
+      font-size: 0.6rem !important;
+  }
+  .login-bg-grid {
+    background-size: 30px 30px !important;
+      transform: rotateX(60deg) scale(1.5) !important;
+  }
+  .bat-signal-bg {
+    width: 100vw !important;
+      height: 100vw !important;
+  }
+  .app-sidebar {
+    position: fixed !important;
+      left: 0 !important;
+      top: 60px !important;
+      height: calc(100vh - 60px) !important;
+      width: 280px !important;
+      transform: translateX(-100%) !important;
+      box-shadow: 2px 0 10px rgba(0,0,0,0.5) !important;
+  }
+  .app-sidebar.mobile-open {
+    transform: translateX(0) !important;
+  }
+  .main-layout {
+    flex-direction: column !important;
+  }
+  .app-content {
+    width: 100% !important;
+      padding: 15px !important;
+  }
+  .app-header {
+    flex-direction: column !important;
+      align-items: stretch !important;
+      padding: 0.6rem !important;
+      gap: 10px !important;
+      position: relative !important;
+      min-height: auto !important;
+  }
+  .header-left {
+    width: 100% !important;
+      flex-wrap: wrap !important;
+      gap: 6px !important;
+      justify-content: space-between !important;
+      order: 1 !important;
+  }
+  .header-right {
+    width: 100% !important;
+      justify-content: space-between !important;
+      gap: 8px !important;
+      flex-wrap: wrap !important;
+      order: 3 !important;
+  }
+  .header-actions {
+    width: 100% !important;
+      justify-content: flex-start !important;
+      gap: 6px !important;
+      flex-wrap: wrap !important;
+      order: 2 !important;
+      margin-top: 6px !important;
+  }
+  .menu-toggle {
+    flex: 1 1 auto !important;
+      min-width: 100px !important;
+      justify-content: center !important;
+      font-size: 0.7rem !important;
+      padding: 0.25rem 0.5rem !important;
+  }
+  .menu-toggle-text {
+    display: inline !important;
+  }
+  .system-status {
+    font-size: 0.6rem !important;
+      gap: 8px !important;
+      margin-left: 0 !important;
+      flex-wrap: wrap !important;
+  }
+  .header-left span {
+    font-size: 0.75rem !important;
+  }
+  .header-left svg {
+    width: 18px !important;
+      height: 18px !important;
+  }
+  .btn-logout {
+    padding: 0.2rem 0.5rem !important;
+      font-size: 0.6rem !important;
+  }
+  .dropdown-content {
+    position: static !important;
+      width: 100% !important;
+      margin-top: 0.5rem !important;
+      box-shadow: none !important;
+      border: 1px solid var(--batman-yellow) !important;
+      border-radius: 4px !important;
+      right: auto !important;
+      left: auto !important;
+      padding: 0.6rem !important;
+  }
+}}
+
+@media (max-width: 500px) {
+  .login-terminal-box {
+    width: 95% !important;
+      padding: 1.2rem 1rem !important;
+  }
+  .terminal-header h1 {
+    font-size: 1.4rem !important;
+      letter-spacing: 0.5px;
+  }
+  .terminal-subtitle {
+    font-size: 0.65rem !important;
+      letter-spacing: 2px;
+  }
+  .input-group-tech label {
+    font-size: 0.65rem !important;
+  }
+  .btn-access-tech {
+    font-size: 0.9rem !important;
+      letter-spacing: 1px;
+  }
+}}
+
+@media (min-width: 1200px) {
+  .menu-toggle-text {
+    display: inline !important;
+  }
+}}
+
+@media (min-width: 769px) {
+  .sidebar-overlay {
+    display: none !important;
+  }
+  .sidebar-overlay.active {
+    display: none !important;
+  }
+}}
 
 @media (max-width: 480px) {
-    .app-sidebar {
-        width: 260px !important;
-    }
-    
-    .sidebar-nav .nav-link {
-        padding: 10px 12px !important;
-        font-size: 0.8rem !important;
-    }
-    
-    .sidebar-nav .nav-link svg {
-        width: 18px !important;
-        height: 18px !important;
-    }
-    
-    .app-content {
-        padding: 10px !important;
-    }
-    
-    .app-header {
-        padding: 0.6rem !important;
-        gap: 10px !important;
-    }
-    
-    .header-left {
-        gap: 6px !important;
-    }
-    
-    .header-left span {
-        font-size: 0.7rem !important;
-    }
-    
-    .system-status {
-        font-size: 0.6rem !important;
-        gap: 8px !important;
-    }
-    
-    .header-right {
-        gap: 8px !important;
-    }
-    
-    .menu-toggle {
-        font-size: 0.7rem !important;
-        padding: 0.3rem 0.6rem !important;
-    }
-    
-    .dropdown-content {
-        padding: 0.8rem !important;
-        font-size: 0.8rem !important;
-    }
-}
-
-
-
+  .app-sidebar {
+    width: 260px !important;
+  }
+  .sidebar-nav .nav-link {
+    padding: 10px 12px !important;
+      font-size: 0.8rem !important;
+  }
+  .sidebar-nav .nav-link svg {
+    width: 18px !important;
+      height: 18px !important;
+  }
+  .app-content {
+    padding: 10px !important;
+  }
+  .app-header {
+    padding: 0.6rem !important;
+      gap: 10px !important;
+  }
+  .header-left {
+    gap: 6px !important;
+  }
+  .header-left span {
+    font-size: 0.7rem !important;
+  }
+  .system-status {
+    font-size: 0.6rem !important;
+      gap: 8px !important;
+  }
+  .header-right {
+    gap: 8px !important;
+  }
+  .menu-toggle {
+    font-size: 0.7rem !important;
+      padding: 0.3rem 0.6rem !important;
+  }
+  .dropdown-content {
+    padding: 0.8rem !important;
+      font-size: 0.8rem !important;
+  }
+}}
